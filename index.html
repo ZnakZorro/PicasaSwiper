@@ -85,9 +85,11 @@ function onload(){
 		document.addEventListener("backbutton", onBackKeyDown, false);
 		document.addEventListener("menubutton", onMenuKeyDown, false);		
 
-		pokazAlbum('http://picasaweb.google.com/data/entry/base/user/114301764978123177574/albumid/5826314318005096257?alt=jsonc&amp;hl=pl');
-		
-		//var t=window.setTimeout(function(){	var mySwiper = new Swiper('.swiper1',{})},1500);
+		// stawskie
+		url='http://picasaweb.google.com/data/entry/base/user/114301764978123177574/albumid/5826314318005096257?alt=jsonc&amp;hl=pl';
+		//shodo
+		var url='http://picasaweb.google.com/data/entry/base/user/103862067778015781731/albumid/5834496646868592273?alt=jsonc&amp;hl=pl';
+		pokazAlbum(url);
 
 	}
 	
@@ -188,8 +190,11 @@ function viewPhotosList(req){
 
 function zaladowany(ten){
 	var mySwiper = new Swiper('.swiper1',{});
-	//ile_obrazkow++;
-	//if (ile_obrazkow == ile_obrazkow_max) var mySwiper = new Swiper('.swiper1',{});
+	/*
+	ile_obrazkow++;
+	$('#infotest').innerHTML='<h1>'+ile_obrazkow+' / '+ile_obrazkow_max+'</h1>';
+	if (ile_obrazkow == ile_obrazkow_max) var mySwiper = new Swiper('.swiper1',{});
+	*/
 
 }
 //ppppppppppppppppppppppppppppppppppppppppppppppppppp
@@ -207,29 +212,14 @@ function zaladowany(ten){
 
 <div class="container-fluid">
   
-
-		<a class="arrow-left" href="#"></a> 
-		<a class="arrow-right" href="#"></a>
-		
 		<div class="swiper-container swiper1">
-			<div class="swiper-wrapper" id="slajdy">
-			</div>
-			</div>
+			<div class="swiper-wrapper" id="slajdy"></div>
 		</div>
-		<div class="pagination pagination1"></div>
-		
 </div>
 
-
-<footer style="display:none;">
-  <p style="text-align: center;">2012-2013 &copy; Swiper by <a href="http://www.idangero.us/">iDangero.us</a></p>
-</footer>
-
-
-<script>
-
-</script>
-
-
+	
+<!--
+		<div id="infotest" style="position:fixed; top:10px; right:10px;z-index:9; color:white; ">...</div>
+-->
 </body>
 </html>
